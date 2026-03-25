@@ -134,6 +134,27 @@ claude plugin install healing@saisurya96-inner-child-healing
 claude --plugin-dir /path/to/inner-child-healing
 ```
 
+### Troubleshooting
+
+**"Host key verification failed" during `plugin install`**
+
+If you see this error:
+
+```
+Failed to clone repository: Host key verification failed.
+fatal: Could not read from remote repository.
+```
+
+This means your machine doesn't have SSH keys configured for GitHub. The install command tries to clone via SSH, which fails without keys set up.
+
+**Fix** — tell Git to use HTTPS instead of SSH for all GitHub repos:
+
+```bash
+git config --global url."https://github.com/".insteadOf "git@github.com:"
+```
+
+Then run the install command again. This is a one-time fix.
+
 ## Privacy
 
 All your data stays on your machine. Profiles, journal entries, everything — stored locally in the plugin's data directory. Nothing is sent to external services. No external APIs. No cloud storage. No telemetry.
