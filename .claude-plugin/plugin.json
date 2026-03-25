@@ -1,0 +1,13 @@
+{
+  "name": "healing",
+  "version": "1.0.0",
+  "description": "An inner child healing facilitator. Plays therapist by default, role-plays your younger self on demand, and journals your healing journey automatically.",
+  "author": {
+    "name": "Sai Surya Vaddi",
+    "url": "https://github.com/saisurya96"
+  },
+  "repository": "https://github.com/saisurya96/inner-child-healing",
+  "homepage": "https://github.com/saisurya96/inner-child-healing",
+  "license": "MIT",
+  "keywords": ["therapy", "inner-child", "healing", "mental-health", "journaling"]
+}
