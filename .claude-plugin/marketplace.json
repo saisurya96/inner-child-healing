@@ -1,13 +1,22 @@
 {
-  "name": "Inner Child Healing",
-  "owner": "saisurya96",
-  "description": "An inner child healing facilitator — ongoing therapeutic relationship with your younger self, facilitated by an AI therapist who remembers you and grows with you.",
+  "name": "inner-child-healing",
+  "owner": {
+    "name": "Sai Surya Vaddi"
+  },
+  "metadata": {
+    "description": "An inner child healing facilitator — ongoing therapeutic relationship with your younger self, facilitated by an AI therapist who remembers you and grows with you."
+  },
   "plugins": [
     {
       "name": "healing",
       "source": {
-        "type": "git",
-        "url": "https://github.com/saisurya96/inner-child-healing.git"
+        "source": "github",
+        "repo": "saisurya96/inner-child-healing"
+      },
+      "description": "Inner child healing therapy plugin — therapist, younger-self roleplay, and automatic journaling.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Sai Surya Vaddi"
       }
     }
   ]
