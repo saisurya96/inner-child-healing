@@ -37,6 +37,54 @@ The plugin has three roles, all running on the same main thread:
 2. **Younger Self** (sub-agent) — A separate agent with its own isolated context. Spawned by the therapist when you run `/healing:younger-self`. Has its own voice and personality, completely separate from the therapist.
 3. **Journal Writer** — Not a separate agent. The therapist handles journaling directly, writing entries silently during both therapist and younger-self sessions.
 
+### How It Flows
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  THERAPIST MODE (default)                                       │
+│                                                                 │
+│   You ──── talk ────▶ Therapist (main thread)                   │
+│                           │           │                         │
+│                           │           ├──▶ reads profiles       │
+│                           │           └──▶ reads journal        │
+│                           │                                     │
+│                           └── writes silently ──▶ journal.json  │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+    You type /healing:younger-self
+                  │
+                  ▼
+
+┌─────────────────────────────────────────────────────────────────┐
+│  YOUNGER-SELF MODE (relay)                                      │
+│                                                                 │
+│   You ── type ──▶ Therapist ── forwards ──▶ Younger-Self Agent  │
+│                   (silent)                   (own context/voice) │
+│                      │                            │             │
+│   You ◀── relays ────┤◀──── child's response ────┘             │
+│                      │                                          │
+│                      └── journals silently ──▶ journal.json     │
+│                         (observes both sides)                   │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+    You type /healing:therapist
+                  │
+                  ▼
+
+    Back to Therapist Mode. Final journal entry written.
+
+┌─────────────────────────────────────────────────────────────────┐
+│  LOCAL STORAGE (${CLAUDE_PLUGIN_DATA}/)                         │
+│                                                                 │
+│   present-self-profile.json   Living profiles, updated as       │
+│   younger-self-profile.json   new info surfaces in sessions     │
+│   journal.json                Structured session notes           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
 ### How Younger-Self Mode Works
 
 When you run `/healing:younger-self`:
