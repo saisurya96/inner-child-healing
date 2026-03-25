@@ -39,51 +39,7 @@ The plugin has three roles, all running on the same main thread:
 
 ### How It Flows
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│  THERAPIST MODE (default)                                       │
-│                                                                 │
-│   You ──── talk ────▶ Therapist (main thread)                   │
-│                           │           │                         │
-│                           │           ├──▶ reads profiles       │
-│                           │           └──▶ reads journal        │
-│                           │                                     │
-│                           └── writes silently ──▶ journal.json  │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-
-    You type /healing:younger-self
-                  │
-                  ▼
-
-┌─────────────────────────────────────────────────────────────────┐
-│  YOUNGER-SELF MODE (relay)                                      │
-│                                                                 │
-│   You ── type ──▶ Therapist ── forwards ──▶ Younger-Self Agent  │
-│                   (silent)                   (own context/voice) │
-│                      │                            │             │
-│   You ◀── relays ────┤◀──── child's response ────┘             │
-│                      │                                          │
-│                      └── journals silently ──▶ journal.json     │
-│                         (observes both sides)                   │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-
-    You type /healing:therapist
-                  │
-                  ▼
-
-    Back to Therapist Mode. Final journal entry written.
-
-┌─────────────────────────────────────────────────────────────────┐
-│  LOCAL STORAGE (${CLAUDE_PLUGIN_DATA}/)                         │
-│                                                                 │
-│   present-self-profile.json   Living profiles, updated as       │
-│   younger-self-profile.json   new info surfaces in sessions     │
-│   journal.json                Structured session notes           │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+![Architecture Diagram](architecture-diag.png)
 
 ### How Younger-Self Mode Works
 
