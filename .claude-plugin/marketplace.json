@@ -1,0 +1,14 @@
+{
+  "name": "Inner Child Healing",
+  "owner": "saisurya96",
+  "description": "An inner child healing facilitator — ongoing therapeutic relationship with your younger self, facilitated by an AI therapist who remembers you and grows with you.",
+  "plugins": [
+    {
+      "name": "healing",
+      "source": {
+        "type": "git",
+        "url": "https://github.com/saisurya96/inner-child-healing.git"
+      }
+    }
+  ]
+}

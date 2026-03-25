@@ -121,7 +121,11 @@ All user data is stored locally in the plugin's persistent data directory (`${CL
 ### From GitHub
 
 ```bash
-claude plugin install saisurya96/inner-child-healing
+# Add the marketplace
+claude plugin marketplace add saisurya96/inner-child-healing
+
+# Install the plugin
+claude plugin install healing@saisurya96-inner-child-healing
 ```
 
 ### Local Development
