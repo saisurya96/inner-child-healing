@@ -2,7 +2,7 @@
 
 A Claude Code plugin that facilitates ongoing inner child healing work.
 
-This is not a one-shot guided meditation or a worksheet. It's an ongoing therapeutic relationship between you (your present self) and your younger self, facilitated by an AI therapist who knows you, remembers you, and grows with you over time.
+This is an ongoing therapeutic relationship between you (your present self) and your younger self, facilitated by an AI therapist who knows you, remembers you, and grows with you over time.
 
 ## How It Works
 
