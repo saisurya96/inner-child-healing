@@ -26,9 +26,24 @@ Take the agent's response and present it directly to the user. Do NOT add therap
 
 ## Step 3: Enter Relay Loop
 
-**CRITICAL: Do NOT spawn a new agent for each user message.** The child agent was created in Step 1 — use SendMessage with the agent's ID (returned in Step 1) to continue that same agent. The child maintains its own conversational memory across the full exchange. Spawning a new Agent each turn destroys context and forces you to re-summarize the conversation, which loses nuance and breaks the child's emotional continuity.
+**Preferred method — SendMessage:** Forward each user message to the same younger-self agent using SendMessage (with the agent's ID returned in Step 1). The child maintains its own conversational memory across the full exchange.
 
-From this point forward, every message the user sends should be forwarded to the same younger-self agent using SendMessage (with the agent's ID). Take the agent's response and relay it directly to the user.
+**Fallback — if SendMessage is not available:** Spawn a new `younger-self` agent for each turn, but you MUST include the **full conversation transcript** between the user and the child so far. Format it clearly in the prompt like:
+
+```
+Here is the conversation so far between you (the child) and your older self:
+
+Older self: "..."
+You (child): "..."
+Older self: "..."
+You (child): "..."
+
+The older self just said: "[latest user message]"
+
+Continue the conversation in character. Stay consistent with everything you've said and felt so far.
+```
+
+This ensures the child maintains emotional continuity and doesn't repeat itself, re-introduce itself, or forget what was already discussed. Include the COMPLETE transcript — do not summarize or omit earlier turns.
 
 **During each relay turn, you also:**
 - Observe what's happening in the exchange (you can see both sides)
