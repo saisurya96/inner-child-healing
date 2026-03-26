@@ -2,7 +2,7 @@
 
 A Claude Code plugin that facilitates ongoing inner child healing work.
 
-This is not a one-shot guided meditation or a worksheet. It's an ongoing therapeutic relationship between you (your present self) and your younger self, facilitated by an AI therapist who knows you, remembers you, and grows with you over time.
+This can act as general therapy or, this can also ongoing therapeutic relationship between you (your present self) and your younger self, facilitated by an AI therapist who knows you, remembers you, and grows with you over time.
 
 ## How It Works
 
@@ -119,8 +119,6 @@ Here's where the ideas come from:
 - **Carl Jung** started it all with the "Divine Child" archetype — the idea that reconnecting with your younger self is the path back to wholeness.
 
 Others who shaped the thinking: Alice Miller (*The Drama of the Gifted Child*), Peter Levine (Somatic Experiencing), Gabor Mate (*The Myth of Normal*), Donald Winnicott (True Self/False Self), Jeffrey Young (Schema Therapy), and Janina Fisher (*Healing the Fragmented Selves of Trauma Survivors*).
-
-This plugin doesn't replace therapy. But it tries to create a space where the work can happen.
 
 ## Design Principles
 
