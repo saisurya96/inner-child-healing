@@ -105,6 +105,23 @@ All user data is stored locally in the plugin's persistent data directory (`${CL
 - New profile information discovered
 - Continuity notes for the next session
 
+## Inspiration
+
+The idea behind this plugin isn't new. Therapists and researchers have been doing inner child work for decades — we just tried to build a space where it can happen in conversation with yourself.
+
+Here's where the ideas come from:
+
+- **John Bradshaw** (*Homecoming*, 1990) brought inner child work into the mainstream. The idea that your wounded younger self carries unfinished business from childhood — and that you can go back and give them what they needed — starts here.
+- **Richard Schwartz** created Internal Family Systems (IFS), which sees the mind as a family of parts — protective ones, wounded ones, and a core Self that can heal them. The younger-self agent in this plugin is essentially an IFS "exile" — the part that holds the pain.
+- **Bessel van der Kolk** (*The Body Keeps the Score*) showed that trauma lives in the body, not just the mind. The therapist in this plugin draws from somatic awareness, not just talk.
+- **Pete Walker** (*Complex PTSD: From Surviving to Thriving*) mapped emotional flashbacks, the inner critic, and the four trauma responses (fight, flight, freeze, fawn). His work directly informs how the therapist recognizes and works with patterns.
+- **John Bowlby's** attachment theory — the idea that early bonds shape everything — is the foundation underneath all of this. Healing happens in relationship. That's why this plugin is built around an ongoing relationship, not a one-time exercise.
+- **Carl Jung** started it all with the "Divine Child" archetype — the idea that reconnecting with your younger self is the path back to wholeness.
+
+Others who shaped the thinking: Alice Miller (*The Drama of the Gifted Child*), Peter Levine (Somatic Experiencing), Gabor Mate (*The Myth of Normal*), Donald Winnicott (True Self/False Self), Jeffrey Young (Schema Therapy), and Janina Fisher (*Healing the Fragmented Selves of Trauma Survivors*).
+
+This plugin doesn't replace therapy. But it tries to create a space where the work can happen.
+
 ## Design Principles
 
 - **Privacy first** — all data stays on your machine

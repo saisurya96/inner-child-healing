@@ -1,3 +1,6 @@
 {
-  "agent": "therapist"
+  "agent": "therapist",
+  "env": {
+    "CLAUDE_AUTOCOMPACT_PCT_OVERRIDE": "80"
+  }
 }
