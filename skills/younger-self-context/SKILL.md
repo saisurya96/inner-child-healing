@@ -41,6 +41,7 @@ Pass all of this to the younger-self agent:
 - The full younger-self profile
 - The computed current emotional state (a brief synthesis, not the raw journal dump)
 - The most recent continuity notes
-- Any relevant context from the present-self profile that the child would be aware of (e.g., the user's relationship to the child's key figures)
+
+**Do NOT pass any information from the present-self profile to the child agent.** The child has no knowledge of the adult's life — where they live, their job, their relationships, their circumstances. The child's world is limited to what their profile describes: their home, their school, their family, their inner life. Anything the child learns about the adult must come through natural conversation, not pre-loaded context.
 
 The agent needs enough to BE the child. Not more, not less.

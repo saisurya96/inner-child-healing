@@ -14,8 +14,9 @@ Use the Agent tool to spawn the `younger-self` agent. In the prompt, include:
 1. The child's profile (read from `${CLAUDE_PLUGIN_DATA}/younger-self-profile.json`)
 2. The child's computed emotional state (read `${CLAUDE_PLUGIN_DATA}/journal.json`, extract `youngerSelfState` entries chronologically, synthesize where the child is NOW)
 3. The most recent `continuityNotes` from the journal
-4. Any relevant context from `${CLAUDE_PLUGIN_DATA}/present-self-profile.json` that the child would be aware of
-5. A brief note on what the user has said or wants to say, if anything
+4. A brief note on what the user has said or wants to say, if anything
+
+**Do NOT include any information from the present-self profile.** The child knows nothing about the adult's life. No location, no job, no relationships, no circumstances. The child discovers who the adult is through conversation only.
 
 Tell the agent to respond as the child — in character, first message.
 
